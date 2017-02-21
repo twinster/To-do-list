@@ -1,0 +1,180 @@
+.weekdays{
+  width:15%;
+  height: 840px;
+  float:left;
+}
+
+[class*='col-'] {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+a {
+  text-decoration: none;
+  width:100%;
+}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h3 {
+  text-align: center; margin-bottom: 0;
+}
+h4 {
+  position:relative;
+}
+.grid {
+  margin: 0;
+}
+.col-1-4 {
+  width: 100%;
+  display: block;
+  float:left;
+}
+.add{
+  width:150%;
+  padding:20px;
+  margin-top:20px;
+  padding-top:30%;
+  
+}
+.add .add-task{
+  padding-left:70px;
+  width:10%;
+  font-size:16px;
+}
+.add .add-task:hover{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size:17px;
+}
+.adding{
+  width:500px;
+  height: auto;
+  background: blue;
+}
+.weekdays div input{
+  width:350px;
+  height: 40px;
+  border-radius: 5px;
+  margin-left:90px;
+  margin-bottom:20px;
+  outline:none;
+  display: inline;
+  float:left;
+
+}
+.weekdays div .tasks{
+  width:550px;
+  height:auto;
+  margin-bottom: 50px;
+  margin-left:70px;
+  float:left;
+  margin-top:50px;
+  color:#607d8b;
+}
+.weekdays div select{
+  width:150px;
+  height: 30px;
+  border-radius: 5px;
+  margin-left:90px;
+  margin-bottom: 20px;
+  float:left;
+  display: inline;
+}
+.weekdays div button{
+  width:100px;
+  height: 30px;
+  display: inline;
+  margin-left: 90px;
+  display: inline;
+  float:left;
+
+ 
+}
+.weekdays div .delete{
+    float:right;
+    width:30px;
+    height: 27px;
+}
+.weekdays div ul{
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+.weekdays div ul li a{
+  margin:0;
+  padding: 0;
+  width:140%;
+  display: block;
+  border:1px solid black;
+  border-radius:5px;
+  height: 30px;
+  text-decoration: none;
+  line-height: 30px;
+  margin-bottom: 10px;
+  color:#607d8b;
+  font-weight: bold;
+  font-size: 20px;
+}
+.weekdays div ul li a span{
+  border-right:2px solid black;
+  font-size:20px;
+  padding:3px 10px;
+  color:#607d8b;
+
+}
+.weekdays div ul li a .type{
+  border:none;
+  border-left:2px solid black;
+  margin-left:200px;
+  margin-right:-40px;
+}
+
+.module {
+  padding-bottom: 10px;
+  padding-top:10px;
+  text-align: center;
+  color: #eee;
+  max-height: 120px;
+  min-width: 120px;
+  background-color: #607D8B;
+  border-radius: 2px;
+  float:left;
+  margin-bottom: 20px;
+}
+.module:hover {
+  background-color: #EEE;
+  cursor: pointer;
+  color: #607d8b;
+}
+.grid-pad {
+  padding: 10px 0;
+}
+.grid-pad > [class*='col-']:last-of-type {
+  padding-right: 20px;
+}
+@media (max-width: 600px) {
+  .module {
+    font-size: 10px;
+    max-height: 75px; }
+}
+@media (max-width: 1024px) {
+  .grid {
+    margin: 0;
+  }
+  .module {
+    min-width: 60px;
+  }
+}
+
+
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/ 

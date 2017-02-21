@@ -1,0 +1,49 @@
+<h3> Plannig a Day </h3>
+<div class="grid grid-pad">
+	<div class="weekdays">
+		<a *ngFor="let week of weeks" (click)="onSelect(week)" [class.selected]="week === selectedWeek">
+			<div class="module week col-1-4">
+				<h4>{{week.name}}</h4>
+			</div>
+			<div class="add" *ngIf="selectedWeek==week">
+				<a class="add-task {{week.name}}" (click)="onselect1(week)" ><b>+</b> Add Task</a>
+				<div class="tasks" *ngIf="week.tasks">
+					<ul>
+						<li>{{week.name}}`s Plans</li>
+  						<li *ngFor="let task of week.tasks; let i = index">
+							<a>
+								<span>{{i+1}}</span>
+								{{task.name}}
+								<span class="type">{{task.type}}</span>
+								<button class="delete" (click)="delete(i)">X</button>
+							</a>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+			<div *ngIf="check==week && selectedWeek==week" class="adding">
+				<input type="text"  #box (keyup.enter)="onEnter(box.value); box.value=''" autofocus class="{{selectedWeek.name}}" placeholder="Write Here">
+				<select (change)="onselect($event.target.value)">
+					<option selected>Choose type...</option>
+					<option value="Important">Important</option>
+					<option value="Quick">Quick</option>
+					<option value="Inevitable">Inevitable</option>
+					<option value="Obligatory">Obligatory</option>
+					<option value="Non-Obligatory">Non-Obligatory</option>
+					<option value="Advisable">Advisable</option>
+				</select>
+				<button (click)="add(box.value); box.value=''">Add</button>
+				
+			</div>
+			
+			
+			
+			
+		</a>
+		
+
+		
+	</div>
+</div>
+ 
